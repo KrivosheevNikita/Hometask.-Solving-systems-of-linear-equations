@@ -4,7 +4,7 @@
 
 std::vector<double> QR(std::vector<std::vector<double>> R, std::vector<double> b)
 {
-	// решение методом QR
+	// СЂРµС€РµРЅРёРµ РјРµС‚РѕРґРѕРј QR
 	int n = b.size();
 	double a;
 	std::vector<double> x(n, 0), y, v, z;
@@ -67,8 +67,8 @@ std::vector<double> QR(std::vector<std::vector<double>> R, std::vector<double> b
 			}
 		}
 
-		Qn = mult_matr(Qn, Q); // преобразование матрицы Q
-		Rn = mult_matr(temp, Rn); // преобразование матрицы R
+		Qn = mult_matr(Qn, Q); // РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РјР°С‚СЂРёС†С‹ Q
+		Rn = mult_matr(temp, Rn); // РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РјР°С‚СЂРёС†С‹ R
 
 		for (int i = k; i < n; ++i)
 		{
