@@ -5,7 +5,7 @@
 
 double det(std::vector<std::vector<double>> A)
 {
-	// вычисление определителя матрицы с помощью LU-разложения
+	// РІС‹С‡РёСЃР»РµРЅРёРµ РѕРїСЂРµРґРµР»РёС‚РµР»СЏ РјР°С‚СЂРёС†С‹ СЃ РїРѕРјРѕС‰СЊСЋ LU-СЂР°Р·Р»РѕР¶РµРЅРёСЏ
 	int n = A.size(), det = 0;
 	std::vector<double> v(n, 0);
 	std::vector<std::vector<double>> P(n, v), U(n, v), L(n, v);
@@ -20,7 +20,7 @@ double det(std::vector<std::vector<double>> A)
 
 bool positive(std::vector<std::vector<double>> A)
 {
-	// проверка на положительную определенность матрицы
+	// РїСЂРѕРІРµСЂРєР° РЅР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅСѓСЋ РѕРїСЂРµРґРµР»РµРЅРЅРѕСЃС‚СЊ РјР°С‚СЂРёС†С‹
 	std::vector<std::vector<double>> B;
 	std::vector<double> v;
 	int size = A.size();
@@ -45,7 +45,7 @@ bool positive(std::vector<std::vector<double>> A)
 
 double sqr(double x)
 {
-	// вычисление корня
+	// РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕСЂРЅСЏ
 	double a = x, b, c;
 	int k = 0;
 
@@ -62,7 +62,7 @@ double sqr(double x)
 
 std::vector<double> mult(std::vector<std::vector<double>> a, std::vector<double> b)
 {
-	// умножение матрицы на вектор 
+	// СѓРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС†С‹ РЅР° РІРµРєС‚РѕСЂ 
 	int n = b.size();
 	std::vector<double> vec(n, 0);
 
@@ -75,7 +75,7 @@ std::vector<double> mult(std::vector<std::vector<double>> a, std::vector<double>
 
 std::vector<double> mult_num(double a, std::vector<double>& z)
 {
-	// умножение вектора на число
+	// СѓРјРЅРѕР¶РµРЅРёРµ РІРµРєС‚РѕСЂР° РЅР° С‡РёСЃР»Рѕ
 	int n = z.size();
 	for (int i = 0; i < n; ++i)
 		z[i] *= a;
@@ -84,7 +84,7 @@ std::vector<double> mult_num(double a, std::vector<double>& z)
 
 std::vector<std::vector<double>> mult_num(double a, std::vector<std::vector<double>>& w)
 {
-	// умножение матрицы на число 
+	// СѓРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС†С‹ РЅР° С‡РёСЃР»Рѕ 
 	int n = w.size();
 
 	for (int i = 0; i < n; ++i)
@@ -96,7 +96,7 @@ std::vector<std::vector<double>> mult_num(double a, std::vector<std::vector<doub
 
 std::vector<double> sum(std::vector<double> a, std::vector<double> b)
 {
-	// сумма векторов
+	// СЃСѓРјРјР° РІРµРєС‚РѕСЂРѕРІ
 	int n = a.size();
 	for (int i = 0; i != n; ++i)
 		a[i] += b[i];
@@ -105,7 +105,7 @@ std::vector<double> sum(std::vector<double> a, std::vector<double> b)
 
 std::vector<std::vector<double>> sum(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b)
 {
-	// сумма матриц
+	// СЃСѓРјРјР° РјР°С‚СЂРёС†
 	int n = a.size();
 	for (int i = 0; i != n; ++i)
 		for (int j = 0; j != n; ++j)
@@ -115,7 +115,7 @@ std::vector<std::vector<double>> sum(std::vector<std::vector<double>> a, std::ve
 
 double norma_vec(std::vector<double> vec)
 {
-	// норма вектора
+	// РЅРѕСЂРјР° РІРµРєС‚РѕСЂР°
 	double norm = 0;
 	int n = vec.size();
 
@@ -130,7 +130,7 @@ double norma_vec(std::vector<double> vec)
 
 double norma_matrix(std::vector<std::vector<double>> a)
 {
-	// норма матрицы
+	// РЅРѕСЂРјР° РјР°С‚СЂРёС†С‹
 	double max = 0, temp = 0;
 	int n = a.size();
 
@@ -163,7 +163,7 @@ bool check(std::vector<std::vector<double>> a)
 
 double norma_matrix2(std::vector<std::vector<double>> a)
 {
-	// спектральная норма матрицы
+	// СЃРїРµРєС‚СЂР°Р»СЊРЅР°СЏ РЅРѕСЂРјР° РјР°С‚СЂРёС†С‹
 	int n = a.size();
 	std::vector<double> v(n, 0);
 	std::vector<std::vector<double>> P(n, v), U(n, v), L(n, v), at(n, v);
@@ -191,7 +191,7 @@ double norma_matrix2(std::vector<std::vector<double>> a)
 
 double norma_matrix3(std::vector<std::vector<double>> a)
 {
-	// норма матрицы
+	// РЅРѕСЂРјР° РјР°С‚СЂРёС†С‹
 	double max = 0, temp = 0;
 	int n = a.size();
 
@@ -211,7 +211,7 @@ double norma_matrix3(std::vector<std::vector<double>> a)
 
 std::vector<std::vector<double>> mult_matr(std::vector<std::vector<double>> A, std::vector<std::vector<double>> B)
 {
-	// умножение матриц
+	// СѓРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС†
 	int n = A.size();
 	std::vector<double> v(n, 0);
 	std::vector<std::vector<double>> R(n, v);
@@ -224,7 +224,7 @@ std::vector<std::vector<double>> mult_matr(std::vector<std::vector<double>> A, s
 
 std::vector<double> find_y(std::vector<std::vector <double>> L, std::vector <double> b)
 {
-	// нахождение вектора y в методе LU-разложения
+	// РЅР°С…РѕР¶РґРµРЅРёРµ РІРµРєС‚РѕСЂР° y РІ РјРµС‚РѕРґРµ LU-СЂР°Р·Р»РѕР¶РµРЅРёСЏ
 	std::vector<double> y;
 	int n = b.size();
 	for (int i = 0; i != n; ++i)
@@ -240,7 +240,7 @@ std::vector<double> find_y(std::vector<std::vector <double>> L, std::vector <dou
 
 std::vector<double> find_x(std::vector<std::vector <double>> U, std::vector <double> y)
 {
-	// нахождение вектора x в методе LU - разложения и QR-разложения
+	// РЅР°С…РѕР¶РґРµРЅРёРµ РІРµРєС‚РѕСЂР° x РІ РјРµС‚РѕРґРµ LU - СЂР°Р·Р»РѕР¶РµРЅРёСЏ Рё QR-СЂР°Р·Р»РѕР¶РµРЅРёСЏ
 	int n = y.size();
 	std::vector<double> x(n, 0);
 
@@ -259,7 +259,7 @@ std::vector<double> find_x(std::vector<std::vector <double>> U, std::vector <dou
 
 double criteria_seidel(std::vector<std::vector<double>> a, std::vector<double> x, std::vector<double> b)
 {
-	// критерий остановки в методе Зейделя
+	// РєСЂРёС‚РµСЂРёР№ РѕСЃС‚Р°РЅРѕРІРєРё РІ РјРµС‚РѕРґРµ Р—РµР№РґРµР»СЏ
 	const int n = b.size();
 	double norm = 0;
 	std::vector<double> vec = mult(a, x);
@@ -272,10 +272,10 @@ double criteria_seidel(std::vector<std::vector<double>> a, std::vector<double> x
 
 double criteria_iteration(std::vector<std::vector<double>> a, std::vector<double> b, std::vector<std::vector<double>> B, std::vector<double> x2, std::vector<double> x1, bool more_than_one)
 {
-	// критерий остановки в методе простой итерации
+	// РєСЂРёС‚РµСЂРёР№ РѕСЃС‚Р°РЅРѕРІРєРё РІ РјРµС‚РѕРґРµ РїСЂРѕСЃС‚РѕР№ РёС‚РµСЂР°С†РёРё
 	if (more_than_one)
 	{
-		//если норма матрицы B больше единицы, то используется критерий ||Ax - b|| < E
+		//РµСЃР»Рё РЅРѕСЂРјР° РјР°С‚СЂРёС†С‹ B Р±РѕР»СЊС€Рµ РµРґРёРЅРёС†С‹, С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєСЂРёС‚РµСЂРёР№ ||Ax - b|| < E
 		double normB = norma_matrix(B);
 		std::vector<double> x;
 		int n = x2.size();
@@ -288,14 +288,14 @@ double criteria_iteration(std::vector<std::vector<double>> a, std::vector<double
 
 	else
 	{
-		//иначе критерий Зейделя
+		//РёРЅР°С‡Рµ РєСЂРёС‚РµСЂРёР№ Р—РµР№РґРµР»СЏ
 		return criteria_seidel(a, x2, b);
 	}
 }
 
 void LU_(std::vector<std::vector<double>> A, std::vector<std::vector<double>>& U, std::vector<std::vector<double>>& L, std::vector<std::vector<double>>& P)
 {
-	// LU - разложение
+	// LU - СЂР°Р·Р»РѕР¶РµРЅРёРµ
 	int n = A.size(), max = 0;
 
 	for (int i = 0; i < n; ++i)
@@ -348,14 +348,14 @@ void LU_(std::vector<std::vector<double>> A, std::vector<std::vector<double>>& U
 
 void show(std::vector<double> x, std::ofstream& file_out)
 {
-	// вывод вектора на экран
+	// РІС‹РІРѕРґ РІРµРєС‚РѕСЂР° РЅР° СЌРєСЂР°РЅ
 	for (auto& c : x)
 		file_out << c << " ";
 }
 
 void show(std::pair<std::vector<double>, int> x, std::ofstream& file_out)
 {
-	// вывод вектора на экран
+	// РІС‹РІРѕРґ РІРµРєС‚РѕСЂР° РЅР° СЌРєСЂР°РЅ
 	for (auto& c : x.first)
 		file_out << c << " ";
 }
