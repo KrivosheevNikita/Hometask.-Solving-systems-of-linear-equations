@@ -4,7 +4,7 @@
 
 std::pair<std::vector<double>, int>  seidel(std::vector<std::vector<double>> a, std::vector<double> b, double e)
 {
-	//метод Зейделя
+	//РјРµС‚РѕРґ Р—РµР№РґРµР»СЏ
 	std::vector<std::vector<double>> c;
 	int n = b.size(), count = 0;
 	std::vector<double> v(n, 0);
