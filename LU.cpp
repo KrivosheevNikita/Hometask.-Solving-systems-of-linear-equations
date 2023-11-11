@@ -4,7 +4,7 @@
 
 std::vector<double> LU(std::vector<std::vector<double>> R, std::vector<double> b)
 {
-	// решение методом LU
+	// СЂРµС€РµРЅРёРµ РјРµС‚РѕРґРѕРј LU
 	int n = b.size();
 	std::vector<double> v(n, 0);
 	std::vector<std::vector<double>> P(n, v), U(n, v), L(n, v);
