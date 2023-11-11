@@ -4,7 +4,7 @@
 
 std::pair<std::vector<double>, int> simple_iteration(std::vector<std::vector<double>> a, std::vector<double> b, double e)
 {
-	// метод простой итерации
+	// РјРµС‚РѕРґ РїСЂРѕСЃС‚РѕР№ РёС‚РµСЂР°С†РёРё
 	int n = b.size(), count = 0;
 	std::vector<double> v(n, 0);
 	bool more_than_one = false;
@@ -26,7 +26,7 @@ std::pair<std::vector<double>, int> simple_iteration(std::vector<std::vector<dou
 
 	if (norma_matrix(B) > 1 && norma_matrix2(B) > 1 && norma_matrix3(B) > 1)
 	{
-		//если норма больше единицы, то домножается на транспонированную матрицу
+		//РµСЃР»Рё РЅРѕСЂРјР° Р±РѕР»СЊС€Рµ РµРґРёРЅРёС†С‹, С‚Рѕ РґРѕРјРЅРѕР¶Р°РµС‚СЃСЏ РЅР° С‚СЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРЅСѓСЋ РјР°С‚СЂРёС†Сѓ
 		std::vector<std::vector<double>> at(n, v);
 
 		for (int i = 0; i < n; ++i)
@@ -52,7 +52,7 @@ std::pair<std::vector<double>, int> simple_iteration(std::vector<std::vector<dou
 	}
 
 	if (norma_matrix(B) > 1 && norma_matrix2(B) > 1 && norma_matrix3(B) > 1)
-		more_than_one = true; // если норма больше единицы, то используется критерий остановки из метода Зейделя
+		more_than_one = true; // РµСЃР»Рё РЅРѕСЂРјР° Р±РѕР»СЊС€Рµ РµРґРёРЅРёС†С‹, С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєСЂРёС‚РµСЂРёР№ РѕСЃС‚Р°РЅРѕРІРєРё РёР· РјРµС‚РѕРґР° Р—РµР№РґРµР»СЏ
 
 	for (int i = 0; i != n; ++i)
 		c.push_back(t * b[i]);
